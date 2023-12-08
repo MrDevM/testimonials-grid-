@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap");
+:root {
+  --myfont: "Barlow Semi Condensed", sans-serif;
+  --violet: hsla(272, 100%, 50%, 0.992); /* first div bg-color */
+  --grayish-blue: hsl(217, 19%, 35%); /* bg-c of secon div color of two divs */
+  --blackish-blue: hsl(219, 29%, 14%); /*  bg-color of the last div */
+  --White: hsl(0, 0%, 100%); /*  bg-c of two divs colo of 2 divs */
+  --bd-cB: hsl(210, 46%, 95%);
+  --shado: hsl(0, 0%, 81%);
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  background-color: var(--bd-cB);
+  max-width: 100%;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--myfont);
+  color: var(--shado);
+}
+img {
+  border-radius: 50%;
+  width: 35px;
+}
+main {
+  width: 1108px;
+  border-radius: 10px;
+  display: flex;
+}
+main .main-left {
+  min-width: 76.5%;
+}
+h3 {
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 2rem;
+}
+p {
+  line-height: 1.3rem;
+  font-size: 13px;
+}
+/* ------------ span and strong ------------   */
+
+span {
+  font-size: 13px;
+}
+strong {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 2px;
+}
+.top strong,
+.ground .right strong {
+  color: var(--White);
+}
+.ground .left strong,
+.main-right strong {
+  color: var(--blackish-blue);
+}
+/* ----------------- other ----------------- */
+.top h3,
+.ground .right h3 {
+  color: var(--White);
+}
+.ground .left h3,
+.main-right h3 {
+  color: var(--grayish-blue);
+}
+.ground .left,
+.main-right {
+  color: var(--grayish-blue);
+}
+/* --------------- main left top ----------------- */
+.top {
+  display: flex;
+}
+
+.top > div {
+  border-radius: 10px;
+  padding: 20px 25px;
+}
+.top .left {
+  margin-right: 30px;
+  background-image: url("images/bg-pattern-quotation.svg");
+  background-repeat: no-repeat;
+  background-position: right 15% top 5px;
+  background-color: var(--violet);
+}
+.top .right {
+  background-color: var(--grayish-blue);
+}
+/* --------------- main left ground ----------------- */
+.ground {
+  display: flex;
+  margin-top: 30px;
+}
+.ground > div {
+  padding: 20px 25px;
+  border-radius: 10px;
+}
+.ground .left {
+  margin-right: 30px;
+  background-color: var(--White);
+}
+.ground .right {
+  background-color: var(--blackish-blue);
+}
+/* --------------- main right ----------------- */
+
+.main-right {
+  border-radius: 10px;
+  margin-left: 24px;
+  padding: 20px 27px 0px;
+  background-color: var(--White);
+}
+/* --------------- avator ----------------- */
+.avator {
+  display: flex;
+  align-items: center;
+}
+.avdes {
+  margin-left: 20px;
+}
+.avdes > * {
+  display: block;
+}
+@media only screen and (max-width: 750px) {
+  main {
+    display: block;
+    margin: 1.5rem;
+  }
+  .main-right,
+  .top .left,
+  .ground .left {
+    margin: 0;
+  }
+  .top .right,
+  .ground .right {
+    margin-top: 20px;
+  }
+  .main-right {
+    margin-top: 20px;
+    padding-bottom: 10px;
+  }
+  .top {
+    display: block;
+  }
+  .ground {
+    display: block;
+  }
+  .ground > div {
+    margin: 0;
+  }
+}
